@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=utf-8>
+
+<title>Intimate Occasions - Celebrating Life's Special Moments</title>
+<meta name=description content="">
+<meta name=keywords content="wedding officiant vow renewal ceremony funeral celebration life">
+
+<meta name=apple-mobile-web-app-title content="Intimate Occasions">
+<meta name=theme-color content="black">
+<meta name=apple-mobile-web-app-capable content=yes>
+<meta name=apple-mobile-web-app-status-bar-style content=black>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<!--<link rel=apple-touch-icon href=favicon.png>-->
+<!--<link type=image/x-icon rel="shortcut icon" href=favicon.png>-->
+
+<meta property="og:title" content="Intimate Occasions">
+<meta property="og:type" content=website>
+<meta property="og:url" content=https://intimateoccasions.ca>
+<!--<meta property="og:image" content=favicon.png>-->
+<meta property="og:description" content="">
+
+<meta name="twitter:title" content="Intimate Occasions">
+<meta name="twitter:card" content=summary>
+<!--<meta name="twitter:image" content=favicon.png>-->
+<meta name="twitter:description" content="">
+
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Dancing+Script:700" rel=stylesheet>
+
+<style>
+  * {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+  }
+  html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    min-height: 100%;
+    background: lavender;
+  }
+  body {
+    min-height: 100%;
+    margin: 0;
+    text-align: center;
+    color: #777;
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 9vw;
+    margin: 0 0 10pt 0;
+  }
+  h1 :first-child {
+    font-family: 'Abril Fatface', cursive;
+  }
+  h1 :last-child {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    margin-left: -.125em;
+  }
+  p {
+    font-size: 14pt;
+  }
+  main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 800px;
+    transform:
+      translateX(-50%)
+      translateY(-50%)
+    ;
+  }
+  nav {
+    font-size: 12pt;
+  }
+  a {
+    display: block;
+    padding: .125em 0;
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition:
+      color .2s ease-in-out,
+      border-bottom-color .2s ease-in-out
+    ;
+  }
+  a:focus,
+  a:hover {
+    color: purple;
+  }
+  span + a {
+    margin-top: .5em
+  }
+  nav span {
+    color: white;
+    opacity: .5;
+    margin: 0 .5em;
+    display: none;
+  }
+  @media (min-width: 400px) {
+    nav {
+      font-size: 14pt;
+    }
+  }
+  @media (min-width: 600px) {
+    nav span,
+    nav a {
+      display: inline-block;
+    }
+    a:focus,
+    a:hover {
+      color: purple;
+      border-bottom-color: currentColor;
+    }
+  }
+  @media (min-width: 800px) {
+    h1 {
+      font-size: 80px;
+    }
+  }
+</style>
+
+<main>
+  <h1><span>Intimate</span> <span>Occasions<span></h1>
+  <p>Celebrating Life's Special Moments</p>
+  <nav>
+    <a href=mailto:intimateoccasions@gmail.com>intimateoccasions@gmail.com</a>
+  </nav>
+</main>
+
+<script>
+  function fontSize() {
+
+    return document.querySelector('h1').style.fontSize =
+
+        document.querySelector('main').offsetWidth / 10 + 'px'
+
+  }
+
+  window.addEventListener('load', fontSize)
+  window.addEventListener('resize', fontSize)
+</script>
