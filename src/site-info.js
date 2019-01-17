@@ -6,7 +6,7 @@ module.exports = {
   description: `Life’s special moments are meant to be commemorated and celebrated! Wedding and event officiant and Master of Ceremonies serving families in the Calgary area.`,
   keywords: 'wedding officiant special event vow renewal ceremony funeral celebration life memorable meaningful romantic family',
   url: 'https://intimateoccasions.ca/',
-  email: 'intimateoccasions@gmail.com',
+  email: 'intimateoccasionsalberta@gmail.com',
   phone: '587-830-4081',
   font: {
     body: 'mrs-eaves-xl-serif, serif',
