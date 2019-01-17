@@ -4,7 +4,7 @@ module.exports = {
   title: 'Intimate Occasions',
   tagline: `Celebrating Life’s Special Moments`,
   description: `Life’s special moments are meant to be commemorated and celebrated! Wedding and event officiant and Master of Ceremonies serving families in the Calgary area.`,
-  keywords: 'wedding officiant special event vow renewal ceremony funeral celebration life memorable meaningful romantic family',
+  keywords: 'wedding officiant commissioner celebrant special event vow renewal ceremony funeral celebration life memorable meaningful romantic family',
   url: 'https://intimateoccasions.ca/',
   email: 'intimateoccasionsalberta@gmail.com',
   phone: '587-830-4081',
@@ -41,6 +41,7 @@ module.exports.meta = () => `
   <link rel="shortcut icon" href=${module.exports.url}${module.exports.favicon}>
   <link rel=stylesheet href=https://use.typekit.net/leq3jko.css media=none onload="media=''">
   <link rel=stylesheet href=${module.exports.url}${module.exports.stylesheet}>
+  <meta name=google-site-verification content="Qwl1hgylyR9L3jBPki5ym7D8EDnQ1tNNTrAvTwUeebo">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132663730-1"></script>
   <script>
     window.dataLayer = window.dataLayer || []
