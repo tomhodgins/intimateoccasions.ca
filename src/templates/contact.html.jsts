@@ -1,0 +1,59 @@
+${site.meta()}
+
+<title>Contact | ${site.title} - ${site.tagline}</title>
+<meta property=og:title content="Contact | ${site.title} - ${site.tagline}">
+
+<meta name=description content="${site.description}">
+<meta property=og:description content="${site.description}">
+
+<meta name=keywords content="${site.keywords.split(' ').join(', ')}">
+
+<meta property=og:url content=${site.url}contact.html>
+
+<main>
+
+  ${site.header()}
+
+  <h1>Contact</h1>
+
+  <p>Life’s special moments are meant to be commemorated and celebrated! A ceremony is a powerful way to honor those involved and receive wonderful lasting memories. I would love to help you create the perfect custom ceremony!</p>
+
+  <p><strong><em>Email:</em></strong> <a href=mailto:${site.email}>${site.email}</a></p>
+
+  <p><strong><em>Phone:</em></strong> <a href=tel:+1${site.phone}>${site.phone}</a></p>
+
+  <h2 id=form>Let’s Talk!</h2>
+
+  <form method=POST action="https://formspring.io/${site.email}">
+    <label>
+      <div>Name</div>
+      <input name=name>
+    </label>
+    <label>
+      <div>Email address <small>(required)</small></div>
+      <input type=email name=email required>
+    </label>
+    <label>
+      <div>Tell me what you are looking for and the person(s) we will be honoring</div>
+      <textarea name=explanation style=--expand:auto;></textarea>
+    </label>
+    <button>Send</button>
+  </form>
+
+  ${site.footer()}
+
+</main>
+
+<script>
+  function autoExpand(event) {
+    event.target.style.height = 'inherit'
+    event.target.style.height = event.target.scrollHeight + 'px'
+  }
+
+  ['input', 'paste', 'blur', 'reprocess'].forEach(event =>
+    document.querySelector('textarea').addEventListener(event, autoExpand)
+  )
+
+  // Process variable right away
+  document.querySelector('textarea').dispatchEvent(new Event('reprocess'))
+</script>

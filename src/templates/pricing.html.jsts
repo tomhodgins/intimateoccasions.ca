@@ -1,0 +1,29 @@
+${site.meta()}
+
+<title>Pricing | ${site.title} - ${site.tagline}</title>
+<meta property=og:title content="Pricing | ${site.title} - ${site.tagline}">
+
+<meta name=description content="${site.description}">
+<meta property=og:description content="${site.description}">
+
+<meta name=keywords content="${site.keywords.split(' ').join(', ')}">
+
+<meta property=og:url content=${site.url}pricing.html>
+
+<main>
+
+  ${site.header()}
+
+  <h1>Pricing</h1>
+
+  <p><strong><em>Custom Ceremonies:</em></strong> $375</p>
+
+  <p><strong><em>Rehearsal:</em></strong> $150</p>
+
+  <p>Travel expenses for ceremonies outside Calgary city limits are calculated at a round trip mileage rate of $0.55/km and $25/hour travel time. <abbr title="Canadian Goods and Services Tax">GST</abbr> of 5% will be added to all services.</p>
+
+  <p>Fees are payable to Sue Hodgins by cash, or by email money transfer to <a href=mailto:${site.email}>${site.email}</a>. A non-refundable initial payment of $150 is required to secure the ceremony date and time, with the remaining balance to be paid prior to the ceremony.</p>
+
+  ${site.footer()}
+
+</main>

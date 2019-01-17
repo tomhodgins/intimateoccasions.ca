@@ -1,0 +1,31 @@
+${site.meta()}
+
+<title>${service.name} - Services | ${site.title} - ${site.tagline} | Calgary, Alberta</title>
+<meta property=og:title content="${service.name} - Services | ${site.title} - ${site.tagline} | Calgary, Alberta">
+
+<meta name=description content="${service.description} ${site.description}">
+<meta property=og:description content="${service.description} ${site.description}">
+
+<meta name=keywords content="${
+  [
+    service.name.split(' '),
+    ...service.keywords.split(' '),
+    ...site.keywords.split(' ')
+  ].join(', ')
+}">
+
+<meta property=og:url content=${site.url}services/${helpers.slug(service.name)}.html>
+
+<main>
+
+  ${site.header()}
+
+  <h1>${service.name}</h1>
+
+  ${service.content}
+
+  ${site.nextUp(services, service, 'service')}
+
+  ${site.footer()}
+
+</main>

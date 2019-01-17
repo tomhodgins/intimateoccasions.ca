@@ -1,0 +1,26 @@
+{
+  "name": "intimateoccasions.ca",
+  "version": "1.0.0",
+  "description": "Celebrating Life's Special Moments",
+  "main": "src/build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd src && node build.js",
+    "dev": "cd src && node build.js 'dev'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomhodgins/intimateoccasions.ca.git"
+  },
+  "author": "Tommy Hodgins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomhodgins/intimateoccasions.ca/issues"
+  },
+  "homepage": "https://github.com/tomhodgins/intimateoccasions.ca#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "glob": "^7.1.3",
+    "jsts-node": "^0.1.0"
+  }
+}

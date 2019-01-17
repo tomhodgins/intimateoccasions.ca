@@ -1,0 +1,51 @@
+${site.meta()}
+
+<title>${location.name}, Alberta - Locations | ${site.title} - ${site.tagline}</title>
+<meta property=og:title content="${location.name}, Alberta - Locations | ${site.title} - ${site.tagline}">
+
+<meta name=description content="${location.description} ${site.description}">
+<meta property=og:description content="${location.description} ${site.description}">
+
+<meta name=keywords content="${
+  [
+    location.name,
+    'Alberta',
+    'Canada',
+    ...location.keywords.split(' '),
+    ...site.keywords.split(' ')
+  ].join(', ')
+}">
+
+<meta property=og:url content=${site.url}locations/${helpers.slug(location.name)}.html>
+
+<main>
+
+  ${site.header()}
+
+  <h1>${location.name}</h1>
+
+  ${location.content}
+
+  <iframe src="https://www.google.com/maps/embed/v1/view?key=${site.googleMapsAPIKey}&center=${location.coordinates}&zoom=10&maptype=roadmap"></iframe>
+
+  <h3>Services Offered in ${location.name}</h3>
+
+  <ul>
+    ${
+      services
+        .map(service => `
+          <li>
+          <a
+            href="${site.url}services/${helpers.slug(service.name)}.html"
+            title="${service.description}"
+          >${service.name}</a>
+        `)
+        .join('\n')
+    }
+  </ul>
+
+  ${site.nextUp(locations, location, 'location')}
+
+  ${site.footer()}
+
+</main>

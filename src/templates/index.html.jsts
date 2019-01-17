@@ -1,0 +1,53 @@
+${site.meta()}
+
+<title>${site.title} - ${site.tagline} | Calgary, Alberta</title>
+<meta property=og:title content="${site.title} - ${site.tagline} | Calgary Alberta">
+
+<meta name=description content="${site.description}">
+<meta property=og:description content="${site.description}">
+
+<meta name=keywords content="${site.keywords.split(' ').join(', ')}">
+
+<meta property=og:url content=${site.url}>
+
+<main>
+
+  ${site.header()}
+
+  <p>Commemorating and celebrating life’s special moments and transitions with a personal and meaningful ceremony is a wonderful way to draw families together and create treasured memories that last a lifetime. It could be a
+    ${
+      services
+        .map(service => `<a
+          href="services/${helpers.slug(service.name)}.html"
+          title="${service.description}"
+        >${service.name}</a>,`)
+        .join(' ')
+    }
+    or some other occasion. If you would like a powerful and effective way to celebrate an important life event, I would love to create a custom ceremony for you!</p>
+
+  <h1>About Sue</h1>
+
+  <p><img src=${site.url}img/sue.jpg alt="A recent picture of Sue"></p>
+
+  <p>Sue is truly living out her calling! She loves to find meaningful ways to invest in the lives of others by planning and leading custom ceremonies and celebrations that support and strengthen relationships.</p>
+
+  <p>Having earned a degree in education, including a minor in counseling, Sue has gained experience in teaching and curriculum development for students from preschool through university. She has given exceptional executive level administrative assistance to several organizations, and received praise for her expertise in large event planning and long-term program management. Sue received an award for superior customer service based on her timely communication, detailed organization and outstanding professionalism.</p>
+
+  <p>Motivated by her desire to give back to her community, Sue has been a dedicated volunteer in various children’s programs, school councils, and choirs.</p>
+
+  <p>Infusing creativity and excellence into all her accomplishments, Sue is personable, sincere, attentive, supportive and a joy to work with!</p>
+
+  <h2>What Others Say About Sue</h2>
+  
+  ${
+    testimonials.map(testimonial => `
+      <blockquote>
+        <p><q>${testimonial.quote}</q></p>
+        <cite>${testimonial.attribution}</cite>
+      </blockquote>
+    `).join('\n')
+  }
+
+  ${site.footer()}
+
+</main>

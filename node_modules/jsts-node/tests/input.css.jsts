@@ -1,0 +1,14 @@
+/* Variables from JS */
+html {
+  background: ${exampleVariable};
+}
+
+/* JS Logic */
+body {
+  font-family: ${Math.random() > .5 ? 'sans-serif' : 'serif'};
+}
+
+/* Running a function from JS */
+h1 {
+  font-size: ${double(10)}pt;
+}
