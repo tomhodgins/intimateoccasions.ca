@@ -24,7 +24,7 @@ ${site.meta()}
 
   <h2 id=form>Let’s Talk!</h2>
 
-  <form method=POST action="https://formspring.io/${site.email}">
+  <form method=POST action="https://formspree.io/${site.email}">
     <label>
       <div>Name</div>
       <input name=name>
