@@ -10,6 +10,8 @@ ${partials.meta()}
 
 <meta property=og:url content=${site.url}contact.html>
 
+</head>
+
 <main>
 
   ${partials.header()}

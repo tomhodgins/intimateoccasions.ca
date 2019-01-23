@@ -16,6 +16,8 @@ ${partials.meta()}
 
 <meta property=og:url content=${site.url}services/${helpers.slug(service.name)}.html>
 
+</head>
+
 <main>
 
   ${partials.header()}

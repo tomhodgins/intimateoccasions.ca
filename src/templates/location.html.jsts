@@ -18,6 +18,8 @@ ${partials.meta()}
 
 <meta property=og:url content=${site.url}locations/${helpers.slug(location.name)}.html>
 
+</head>
+
 <main>
 
   ${partials.header()}

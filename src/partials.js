@@ -15,7 +15,7 @@ module.exports.meta = () => `
   <meta property=og:type content=website>
   <meta property=og:image content=${site.url}${site.favicon}>
   <link rel=apple-touch-icon href=${site.url}${site.favicon}>
-  <link rel="shortcut icon" href=${site.url}${site.favicon}>
+  <link rel=icon href=${site.url}${site.favicon}>
   <link rel=stylesheet href=https://use.typekit.net/leq3jko.css media=none onload="media=''">
   <link rel=stylesheet href=${site.url}${site.stylesheet}>
   <meta name=google-site-verification content="Qwl1hgylyR9L3jBPki5ym7D8EDnQ1tNNTrAvTwUeebo">
