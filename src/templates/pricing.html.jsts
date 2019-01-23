@@ -1,4 +1,4 @@
-${site.meta()}
+${partials.meta()}
 
 <title>Pricing | ${site.title} - ${site.tagline}</title>
 <meta property=og:title content="Pricing | ${site.title} - ${site.tagline}">
@@ -12,7 +12,7 @@ ${site.meta()}
 
 <main>
 
-  ${site.header()}
+  ${partials.header()}
 
   <h1>Pricing</h1>
 
@@ -24,6 +24,6 @@ ${site.meta()}
 
   <p>Fees are payable to Sue Hodgins by cash, or by email money transfer to <a href=mailto:${site.email}>${site.email}</a>. A non-refundable initial payment of $150 is required to secure the ceremony date and time, with the remaining balance to be paid prior to the ceremony.</p>
 
-  ${site.footer()}
+  ${partials.footer()}
 
 </main>

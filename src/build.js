@@ -2,10 +2,12 @@
 const fs = require('fs')
 const glob = require('glob')
 const {compile} = require('jsts-node')
-const helpers = require('./helpers.js')
+const prettier = require('prettier')
 
 // Site info
 const site = require('./site-info.js')
+const helpers = require('./helpers.js')
+const partials = require('./partials.js')
 const {locations} = require('./locations.js')
 const {services} = require('./services.js')
 const {testimonials} = require('./testimonials.js')
@@ -39,7 +41,7 @@ console.log('✔ CSS compiled')
 compile(
   'templates/index.html.jsts',
   '../index.html',
-  {site, helpers, locations, services, testimonials}
+  {site, partials, helpers, locations, services, testimonials}
 )
 
 console.log('✔ Index page built')
@@ -48,14 +50,14 @@ console.log('✔ Index page built')
 compile(
   'templates/locations.html.jsts',
   '../locations/index.html',
-  {site, helpers, locations, services}
+  {site, partials, helpers, locations, services}
 )
 
 locations.forEach(location =>
   compile(
     'templates/location.html.jsts',
     `../locations/${helpers.slug(location.name)}.html`,
-    {site, helpers, locations, location, services}
+    {site, partials, helpers, locations, location, services}
   )
 )
 
@@ -65,14 +67,14 @@ console.log('✔ Location pages built')
 compile(
   'templates/services.html.jsts',
   '../services/index.html',
-  {site, helpers, locations, services}
+  {site, partials, helpers, locations, services}
 )
 
 services.forEach(service =>
   compile(
     'templates/service.html.jsts',
     `../services/${helpers.slug(service.name)}.html`,
-    {site, helpers, locations, services, service}
+    {site, partials, helpers, locations, services, service}
   )
 )
 
@@ -82,7 +84,7 @@ console.log('✔ Service pages built')
 compile(
   'templates/pricing.html.jsts',
   '../pricing.html',
-  {site, helpers, services}
+  {site, partials, helpers, services}
 )
 
 console.log('✔ Pricing page built')
@@ -91,7 +93,7 @@ console.log('✔ Pricing page built')
 compile(
   'templates/contact.html.jsts',
   '../contact.html',
-  {site, helpers}
+  {site, partials, helpers}
 )
 
 console.log('✔ Contact page built')
@@ -118,11 +120,16 @@ fs.writeFileSync(
 
 console.log('✔ Sitemap.txt generated')
 
-/*
+// Prettify generated HTML
+glob.sync('../**/*.html').forEach(file => {
+  fs.writeFileSync(
+    file,
+    prettier.format(
+      fs.readFileSync(file).toString(),
+      {parser: 'html'}
+    )
+  )
+  return console.log(`✔ ${file} prettified`)
+})
 
-for file in **.html
-  echo "Prettifying " $file
-  prettier $file --write
-end
-
-*/
+console.log('✔ Build complete!')

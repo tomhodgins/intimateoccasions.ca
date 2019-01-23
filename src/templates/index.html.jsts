@@ -1,4 +1,4 @@
-${site.meta()}
+${partials.meta()}
 
 <title>${site.title} - ${site.tagline} | Calgary, Alberta</title>
 <meta property=og:title content="${site.title} - ${site.tagline} | Calgary Alberta">
@@ -12,7 +12,7 @@ ${site.meta()}
 
 <main>
 
-  ${site.header()}
+  ${partials.header()}
 
   <p>Commemorating and celebrating life’s special moments and transitions with a personal and meaningful ceremony is a wonderful way to draw families together and create treasured memories that last a lifetime. It could be a
     ${
@@ -48,6 +48,6 @@ ${site.meta()}
     `).join('\n')
   }
 
-  ${site.footer()}
+  ${partials.footer()}
 
 </main>

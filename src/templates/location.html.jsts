@@ -1,4 +1,4 @@
-${site.meta()}
+${partials.meta()}
 
 <title>${location.name}, Alberta - Locations | ${site.title} - ${site.tagline}</title>
 <meta property=og:title content="${location.name}, Alberta - Locations | ${site.title} - ${site.tagline}">
@@ -20,7 +20,7 @@ ${site.meta()}
 
 <main>
 
-  ${site.header()}
+  ${partials.header()}
 
   <h1>${location.name}</h1>
 
@@ -44,8 +44,8 @@ ${site.meta()}
     }
   </ul>
 
-  ${site.nextUp(locations, location, 'location')}
+  ${partials.nextUp(locations, location, 'location')}
 
-  ${site.footer()}
+  ${partials.footer()}
 
 </main>

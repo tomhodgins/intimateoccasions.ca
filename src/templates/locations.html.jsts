@@ -1,4 +1,4 @@
-${site.meta()}
+${partials.meta()}
 
 <title>Locations Served | ${site.title} - ${site.tagline}</title>
 <meta property=og:title content="Locations Served | ${site.title} - ${site.tagline}">
@@ -12,7 +12,7 @@ ${site.meta()}
 
 <main>
 
-  ${site.header()}
+  ${partials.header()}
 
   <h1>Locations</h1>
 
@@ -29,6 +29,6 @@ ${site.meta()}
     }
   </ul>
 
-  ${site.footer()}
+  ${partials.footer()}
 
 </main>

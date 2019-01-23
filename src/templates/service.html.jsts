@@ -1,4 +1,4 @@
-${site.meta()}
+${partials.meta()}
 
 <title>${service.name} - Services | ${site.title} - ${site.tagline} | Calgary, Alberta</title>
 <meta property=og:title content="${service.name} - Services | ${site.title} - ${site.tagline} | Calgary, Alberta">
@@ -18,14 +18,14 @@ ${site.meta()}
 
 <main>
 
-  ${site.header()}
+  ${partials.header()}
 
   <h1>${service.name}</h1>
 
   ${service.content}
 
-  ${site.nextUp(services, service, 'service')}
+  ${partials.nextUp(services, service, 'service')}
 
-  ${site.footer()}
+  ${partials.footer()}
 
 </main>

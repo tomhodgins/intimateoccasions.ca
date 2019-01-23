@@ -1,4 +1,4 @@
-${site.meta()}
+${partials.meta()}
 
 <title>Contact | ${site.title} - ${site.tagline}</title>
 <meta property=og:title content="Contact | ${site.title} - ${site.tagline}">
@@ -12,7 +12,7 @@ ${site.meta()}
 
 <main>
 
-  ${site.header()}
+  ${partials.header()}
 
   <h1>Contact</h1>
 
@@ -40,7 +40,7 @@ ${site.meta()}
     <button>Send</button>
   </form>
 
-  ${site.footer()}
+  ${partials.footer()}
 
 </main>
 
