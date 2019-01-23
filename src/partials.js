@@ -5,6 +5,7 @@ const {slug, wrappedPrevious, wrappedNext, hex2rgb} = require('./helpers.js')
 module.exports.meta = () => `
   <!DOCTYPE html>
   <html lang=en>
+  <head>
   <meta charset=utf-8>
   <meta name=theme-color content="rgb(${hex2rgb(site.color.red)}, .3)">
   <meta name=apple-mobile-web-app-title content="${site.title}">
