@@ -30,7 +30,7 @@ if (process.argv[2] === 'staging') {
 
 // Compile css file
 compile(
-  'templates/style.css.jsts',
+  'templates/style.jsts.css',
   `../${site.stylesheet}`,
   {site, helpers}
 )
@@ -39,7 +39,7 @@ console.log('✔ CSS compiled')
 
 // Compile index file
 compile(
-  'templates/index.html.jsts',
+  'templates/index.jsts.html',
   '../index.html',
   {site, partials, helpers, locations, services, testimonials}
 )
@@ -48,14 +48,14 @@ console.log('✔ Index page built')
 
 // Compile location pages
 compile(
-  'templates/locations.html.jsts',
+  'templates/locations.jsts.html',
   '../locations/index.html',
   {site, partials, helpers, locations, services}
 )
 
 locations.forEach(location =>
   compile(
-    'templates/location.html.jsts',
+    'templates/location.jsts.html',
     `../locations/${helpers.slug(location.name)}.html`,
     {site, partials, helpers, locations, location, services}
   )
@@ -65,14 +65,14 @@ console.log('✔ Location pages built')
 
 // Compile Services pages
 compile(
-  'templates/services.html.jsts',
+  'templates/services.jsts.html',
   '../services/index.html',
   {site, partials, helpers, locations, services}
 )
 
 services.forEach(service =>
   compile(
-    'templates/service.html.jsts',
+    'templates/service.jsts.html',
     `../services/${helpers.slug(service.name)}.html`,
     {site, partials, helpers, locations, services, service}
   )
@@ -82,7 +82,7 @@ console.log('✔ Service pages built')
 
 // Compile pricing file
 compile(
-  'templates/pricing.html.jsts',
+  'templates/pricing.jsts.html',
   '../pricing.html',
   {site, partials, helpers, services}
 )
@@ -91,7 +91,7 @@ console.log('✔ Pricing page built')
 
 // Compile contact file
 compile(
-  'templates/contact.html.jsts',
+  'templates/contact.jsts.html',
   '../contact.html',
   {site, partials, helpers}
 )
@@ -113,15 +113,23 @@ for (let location in locations) {
 // Generate sitemap file
 fs.writeFileSync(
   '../sitemap.txt',
-  glob.sync('../**/*.html')
-    .map(path => path.replace(/^..\//, site.url))
-    .join('\n')
+  [
+    ...glob.sync('../*.html').map(path =>
+      path.replace(/^..\//, site.url).replace(/.html$/, '')
+    ),
+    ...glob.sync('../locations/*.html').map(path =>
+      path.replace(/^..\//, site.url).replace(/.html$/, '')
+    ),
+    ...glob.sync('../services/*.html').map(path =>
+      path.replace(/^..\//, site.url).replace(/.html$/, '')
+    )
+  ].join('\n')
 )
 
 console.log('✔ Sitemap.txt generated')
 
 // Prettify generated HTML
-glob.sync('../**/*.html').forEach(file => {
+const prettify = file => {
   fs.writeFileSync(
     file,
     prettier.format(
@@ -130,6 +138,10 @@ glob.sync('../**/*.html').forEach(file => {
     )
   )
   return console.log(`✔ ${file} prettified`)
-})
+}
+
+glob.sync('../*.html').forEach(file => prettify(file))
+glob.sync('../services/*.html').forEach(file => prettify(file))
+glob.sync('../locations/*.html').forEach(file => prettify(file))
 
 console.log('✔ Build complete!')
