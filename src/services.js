@@ -44,7 +44,7 @@ module.exports.services = [
     content: `
       <p>Retirement is a very important transition that should be celebrated! A ceremony helps mark the closing of one large chapter of life and the opening of a new one!</p>
 
-      <p>I would love to help you create a retirement ceremony that recognizes a person’s contributions and accomplishments and voices appreciation for the personal qualities, sacrifices and skills that made them a valued colleague. Sincere appreciate and affirmation give a sense of satisfaction and confidence that will help launch them into a positive and fulfilling retirement.</p>
+      <p>I would love to help you create a retirement ceremony that recognizes a person’s contributions and accomplishments and voices appreciation for the personal qualities, sacrifices and skills that made them a valued colleague. Sincere appreciation and affirmation give a sense of satisfaction and confidence that will help launch them into a positive and fulfilling retirement.</p>
 
       <p>Calgary and the surrounding area have an abundance of indoor ceremony venues and outdoor areas with breathtaking scenery in every season! Small ceremonies could be held at your home or mine. I would love to work with you to create a custom retirement celebration! <a href="${site.url}contact.html#form" title="Fill out the contact form">Let’s Talk!</a></p>
     `
