@@ -16,7 +16,8 @@ const {testimonials} = require('./testimonials.js')
 if (process.argv[2] === 'dev') {
   console.log('🚨🚨 HACKER ALERT! 🚨🚨')
   console.log('Running in DEVELOPMENT mode')
-  site.url = process.cwd().split('/src')[0] + '/'
+  //site.url = process.cwd().split('/src')[0] + '/'
+  site.url = '/'
   console.log(`Site URL output as ${site.url}`)
 }
 

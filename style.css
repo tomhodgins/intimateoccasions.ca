@@ -371,7 +371,8 @@ form button {
   color: white;
   font-weight: bold;
   border-color: rgba(0, 0, 0, .3);
-  background-color: #c12F61;
+  /*background-color: #c12F61;*/
+  background-color: #008a20;
   cursor: pointer;
 }
 
@@ -380,7 +381,8 @@ form button:focus {
 }
 
 form button:active {
-  background-color: rgba(204, 17, 34, .75);
+  /*background-color: rgba(204, 17, 34, .75);*/
+  background-color: #007017;
 }
 
 @media (min-width: 650px) {
