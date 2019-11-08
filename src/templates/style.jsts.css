@@ -254,6 +254,30 @@ footer {
   color: ${site.color.gray};
 }
 
+footer figure {
+  display: block;
+  margin: 2em auto 0;
+  max-width: 200px;
+  padding: .5em .5em 0;
+  background: white;
+}
+
+footer figure img {
+  display: block;
+}
+
+footer figure figcaption {
+  font-size: 12pt;
+  font-weight: bold;
+  margin-top: .5em;
+}
+
+footer figure figcaption small {
+  display: block;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
 @media (min-width: ${site.breakpoint}) {
   header {
     margin-top: 33vh;
@@ -376,8 +400,9 @@ form button {
   cursor: pointer;
 }
 
+form button:hover,
 form button:focus {
-  box-shadow: rgba(0, 0, 0, .3) 2px 2px 2px;
+  box-shadow: rgba(0, 0, 0, .3) 0 1px 2px;
 }
 
 form button:active {
@@ -444,6 +469,7 @@ blockquote:nth-of-type(even) cite {
   text-align: right;
 }
 
+/*
 blockquote:nth-of-type(even) cite::before {
   content: '';
 }
@@ -451,6 +477,7 @@ blockquote:nth-of-type(even) cite::before {
 blockquote:nth-of-type(even) cite::after {
   content: ' —';
 }
+*/
 
 @media (min-width: ${site.breakpoint}) {
   blockquote {

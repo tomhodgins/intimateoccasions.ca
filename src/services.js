@@ -56,7 +56,7 @@ module.exports.services = [
     content: `
       <p>A Celebration of Life/Funeral Service that truly reflects and honors your loved one is one of the last gifts you can give them. It is a gift that also gives you and all in attendance some closure and precious memories to ease your grief.</p>
 
-      <p>I would love to help you create a service that reflects your loved one’s values, interests and personality, and honors them for their outstanding qualities and contributions. A service that demonstrates appreciation for your unique and important heritage. This is a very stressful time but I want to help you do this well, and I will give you a printed copy of the service as a keepsake.</p>
+      <p>As a Certified Funeral Celebrant with the Life Celebrants of Canada, I would love to help you create a service that reflects your loved one’s values, interests and personality, and honors them for their outstanding qualities and contributions. A service that demonstrates appreciation for your unique and important heritage. This is a very stressful time but I want to help you do this well, and I will give you a printed copy of the service as a keepsake.</p>
 
       <p>Calgary and the surrounding area have an abundance of indoor venues and outdoor areas with beautiful scenery for Celebration of Life Services. Small services could be held at your home or mine. I would love to work with you to create a memorable service. <a href="${site.url}contact.html#form" title="Fill out the contact form">Let’s Talk!</a></p>
     `

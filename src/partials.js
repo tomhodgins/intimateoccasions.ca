@@ -82,5 +82,9 @@ module.exports.footer = () => `
   <footer>
     <p><a href="mailto:${site.email}" title="Click to send an email">${site.email}</a>
     <a href="tel:+1${site.phone.replace(/-/g, '')}" title="Click to call">${site.phone}</a></p>
+    <figure>
+      <img src=/img/life-celebrants-canada.jpg alt="Life Celebrants of Canada">
+      <figcaption>Certified Celebrant<small>Life Celebrants of Canada</small></figcaption>
+    </figure>
   </footer>
 `
