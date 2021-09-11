@@ -73,7 +73,7 @@ module.exports.header = () => `
 // Next Item in Category
 module.exports.nextUp = (list=[], item, name='page') => `
   <nav class=next>
-    <span>View next ${name}</span> <a href="${site.url}${name}s/${slug(wrappedNext(list, item).name)}.html" title="${wrappedNext(list, item).description}">${wrappedNext(list, item).name} &rarr;</a>
+    <span>View next ${name}:</span> <a href="${site.url}${name}s/${slug(wrappedNext(list, item).name)}.html" title="${wrappedNext(list, item).description}">${wrappedNext(list, item).name} &rarr;</a>
   </nav>
 `
 
