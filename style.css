@@ -469,6 +469,17 @@ blockquote:nth-of-type(even) cite {
   text-align: right;
 }
 
+blockquote:nth-of-type(odd).full,
+blockquote:nth-of-type(even).full {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+blockquote:nth-of-type(odd).full p,
+blockquote:nth-of-type(even).full p {
+  font-size: 1.5rem;
+}
+
 /*
 blockquote:nth-of-type(even) cite::before {
   content: '';
